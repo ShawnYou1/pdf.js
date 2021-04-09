@@ -194,7 +194,7 @@ function createWebpackConfig(
     !bundleDefines.CHROME &&
     !bundleDefines.LIB &&
     !bundleDefines.TESTING &&
-    !disableSourceMaps;
+    !disableSourceMaps && false;
   const skipBabel = bundleDefines.SKIP_BABEL;
 
   // `core-js` (see https://github.com/zloirock/core-js/issues/514),
