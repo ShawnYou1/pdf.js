@@ -35,7 +35,7 @@ import { getShadingPatternFromIR, TilingPattern } from "./pattern_helper.js";
 const MIN_FONT_SIZE = 16;
 // Maximum font size that would be used during canvas fillText operations.
 const MAX_FONT_SIZE = 100;
-const MAX_GROUP_SIZE = 4096;
+const MAX_GROUP_SIZE = 8192;
 
 const COMPILE_TYPE3_GLYPHS = true;
 const MAX_SIZE_TO_COMPILE = 1000;
