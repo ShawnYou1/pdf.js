@@ -244,7 +244,7 @@ const defaultOptions = {
     value:
       typeof PDFJSDev === "undefined" || !PDFJSDev.test("PRODUCTION")
         ? "../src/worker_loader.js"
-        : "/images/read/zhenti/detail/viewer/build/pdf.worker.js",
+        : "../build/pdf.worker.js",
     kind: OptionKind.WORKER,
   },
 };
