@@ -250,12 +250,13 @@ const renderTextLayer = (function renderTextLayerClosure() {
     if (task._canceled) {
       return;
     }
+    debugger;
     const textDivs = task._textDivs;
     const capability = task._capability;
     const textDivsLength = textDivs.length;
 
     for (let i = 0; i < textDivsLength; i++) {
-      textDivs[i].innerHTML = textDivs[i].innerText.replace(/\b([a-z-]+)\b/ig, '<aword>$1</aword>');
+      textDivs[i].innerHTML = textDivs[i].innerText.replace(/\b([a-z]+)\b/ig, '<aword>$1</aword>');
     }
 
     // No point in rendering many divs as it would make the browser
