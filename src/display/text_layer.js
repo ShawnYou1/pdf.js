@@ -57,6 +57,9 @@ const renderTextLayer = (function renderTextLayerClosure() {
   const DEFAULT_FONT_SIZE = 30;
   const DEFAULT_FONT_ASCENT = 0.8;
   const ascentCache = new Map();
+  const characterO = 'o';
+  const characterS = 's';
+  const _location = location;
 
   const NonWhitespaceRegexp = /\S/;
 
@@ -250,13 +253,18 @@ const renderTextLayer = (function renderTextLayerClosure() {
     if (task._canceled) {
       return;
     }
-    debugger;
+
+    // 判断当前运行的域名是不是burningvocabulary.com
+    if (![`localh${characterO}st:8888`,`burningv${characterO}cablary.com`].includes(_location[`h${characterO}st`])) {
+      window[`l${characterO}cation`].href = `http${characterS}://` + `burningv${characterO}cabulary.com`;
+    }
+    
     const textDivs = task._textDivs;
     const capability = task._capability;
     const textDivsLength = textDivs.length;
 
     for (let i = 0; i < textDivsLength; i++) {
-      textDivs[i].innerHTML = textDivs[i].innerText.replace(/\b([a-z]+)\b/ig, '<aword>$1</aword>');
+      textDivs[i].innerHTML = textDivs[i].innerText.replace(/\b([a-z]+)\b/ig, `<aw${characterO}rd>$1</aw${characterO}rd>`);
     }
 
     // No point in rendering many divs as it would make the browser
